@@ -2,7 +2,8 @@
 import './App.css';
 import { useEffect, useState } from 'react';
 import Form from './Form/Form';
-import List from './List/List';
+
+import Table from './List/Table';
 
 
 
@@ -34,11 +35,9 @@ return (
     reqType={reqType}
     setReqType={setReqType}
    />
-  
-  <List
-    items={items}
-  />
+
     
+  <Table items={items}/>
       
 
     </div> 

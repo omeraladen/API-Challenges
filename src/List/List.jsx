@@ -1,16 +1,20 @@
-import React from 'react'
+import React from 'react';
+import './list.css';
+import ListItem from '../List/ListItem';
 
 function List({items}) {
+    // const keys = [id,name,username,email,
+    //     JSON.stringify(items.address),
+    //     phone,website,JSON.stringify(items.company)];
+
   return (
-    <div>
-       {
-         items.map(items => <ul key={items.id}>
-            <li>
-            {JSON.stringify(items)}
-        </li>
-        </ul>)
-       }
-    </div>
+    <ul>
+        {
+          items.map(item => (
+            <ListItem  key={item.id} item={item}/>
+          ))
+        }
+    </ul>
   )
 }
 
